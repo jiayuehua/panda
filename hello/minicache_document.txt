@@ -1,0 +1,9 @@
+minimemcache document
+//std::istream& help(std::istream &is, Cache& cache)
+//{
+//	return is>>ignoreLine;
+//}
+//design a cache 
+//query : it = hashmap.find(node); lit = list.iterator_to(*it); list.erase(lit);list.push_back(*it);
+//insert pnode = new Node; list.push_back(*pnode); hashmap.insert(*pnode);
+//erase // hashmap.erase(list.front()); list.erase_and_dispose(list.begin());

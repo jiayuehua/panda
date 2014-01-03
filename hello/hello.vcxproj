@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B4F98BD0-46C5-4972-89F4-7A834DE9AF7C}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="binary_search_rotate.cpp" />
+    <ClCompile Include="btree_to_dlink.cpp" />
+    <ClCompile Include="compress.cpp" />
+    <ClCompile Include="compute_array.cpp" />
+    <ClCompile Include="coroutine.cpp" />
+    <ClCompile Include="cout.cpp" />
+    <ClCompile Include="create_binary_tree.cpp" />
+    <ClCompile Include="final.cpp" />
+    <ClCompile Include="ismatch.cpp" />
+    <ClCompile Include="Josephson.cpp" />
+    <ClCompile Include="left_right_test.cpp" />
+    <ClCompile Include="localfunction.cpp" />
+    <ClCompile Include="match.cpp" />
+    <ClCompile Include="matrix_iterator_test.cpp" />
+    <ClCompile Include="new_test.cpp" />
+    <ClCompile Include="parent_node.cpp" />
+    <ClCompile Include="positive_path_binarynode.cpp" />
+    <ClCompile Include="prime.cpp" />
+    <ClCompile Include="print_list.cpp" />
+    <ClCompile Include="sm.cpp" />
+    <ClCompile Include="SMatrixEntryExit_test.cpp" />
+    <ClCompile Include="SMatrix_bug_test.cpp" />
+    <ClCompile Include="state_machine.cpp" />
+    <ClCompile Include="stringstream_test.cpp" />
+    <ClCompile Include="swap_string.cpp" />
+    <ClCompile Include="S_machine.cpp" />
+    <ClCompile Include="test_internal.cpp" />
+    <ClCompile Include="test_metastatemachine.cpp" />
+    <ClCompile Include="test_msm.cpp" />
+    <ClCompile Include="test_phoenix.cpp" />
+    <ClCompile Include="test_ref.cpp" />
+    <ClCompile Include="test_wave.cpp" />
+    <ClCompile Include="time4quarter.cpp" />
+    <ClCompile Include="timer1q_test.cpp" />
+    <ClCompile Include="timer2q_test.cpp" />
+    <ClCompile Include="timer3q_test.cpp" />
+    <ClCompile Include="vc2005_test.cpp" />
+    <ClCompile Include="volatile_test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="complete_btree.h" />
+    <ClInclude Include="test_wave.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
