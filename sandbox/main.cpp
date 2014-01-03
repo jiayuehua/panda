@@ -16,10 +16,10 @@ void foo(unsigned)
 }
 int main()
 {
-	std::ifstream ifs ("hi.txt");//add some text in the origin
-	std::ofstream ofs("o.txt");//add some text in the origin
-	std::string str;//add some text in the origin
-	std::getline(ifs, str, char(-1));//add some text in the origin
+	std::ifstream ifs ("hi.txt");//add some t
+	std::ofstream ofs("o.txt");//add some te
+	std::string str;//add some text in the 
+	std::getline(ifs, str, char(-1));//add
 
 	std::string a("\n");
 	std::string bb("\n\n\n\n\n");
