@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="unixdomains"
+	ProjectGUID="{3CC1B087-1AFF-410E-A8D6-ED86C6053B89}"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="&quot;$(VISUALGDB_DIR)\VisualGDB.exe&quot; /build &quot;$(ProjectPath)&quot; &quot;/solution:$(SolutionPath)&quot; &quot;/config:$(ConfigurationName)&quot; &quot;/platform:$(PlatformName)&quot;"
+				ReBuildCommandLine="&quot;$(VISUALGDB_DIR)\VisualGDB.exe&quot; /rebuild &quot;$(ProjectPath)&quot; &quot;/solution:$(SolutionPath)&quot; &quot;/config:$(ConfigurationName)&quot; &quot;/platform:$(PlatformName)&quot;"
+				CleanCommandLine="&quot;$(VISUALGDB_DIR)\VisualGDB.exe&quot; /clean &quot;$(ProjectPath)&quot; &quot;/solution:$(SolutionPath)&quot; &quot;/config:$(ConfigurationName)&quot; &quot;/platform:$(PlatformName)&quot;"
+				Output="$(ProjectDir)unixdomains-Debug.vgdbsettings"
+				PreprocessorDefinitions="__VisualGDB_CFG_Debug"
+				IncludeSearchPath="$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0004\5.2.0;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0004\5.2.0\i686-pc-linux-gnu;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0004\5.2.0\backward;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0005\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0003\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0006\include-fixed;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0000\include\i386-linux-gnu;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0000\include"
+				ForcedIncludes="$(ProjectDir)\gcc_Debug.h;$(VISUALGDB_DIR)\gcc_compat.h"
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="&quot;$(VISUALGDB_DIR)\VisualGDB.exe&quot; /build &quot;$(ProjectPath)&quot; &quot;/solution:$(SolutionPath)&quot; &quot;/config:$(ConfigurationName)&quot; &quot;/platform:$(PlatformName)&quot;"
+				ReBuildCommandLine="&quot;$(VISUALGDB_DIR)\VisualGDB.exe&quot; /rebuild &quot;$(ProjectPath)&quot; &quot;/solution:$(SolutionPath)&quot; &quot;/config:$(ConfigurationName)&quot; &quot;/platform:$(PlatformName)&quot;"
+				CleanCommandLine="&quot;$(VISUALGDB_DIR)\VisualGDB.exe&quot; /clean &quot;$(ProjectPath)&quot; &quot;/solution:$(SolutionPath)&quot; &quot;/config:$(ConfigurationName)&quot; &quot;/platform:$(PlatformName)&quot;"
+				Output="$(ProjectDir)unixdomains-Release.vgdbsettings"
+				PreprocessorDefinitions="__VisualGDB_CFG_Release"
+				IncludeSearchPath="$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0004\5.2.0;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0004\5.2.0\i686-pc-linux-gnu;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0004\5.2.0\backward;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0005\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0003\include;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0006\include-fixed;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0000\include\i386-linux-gnu;$(LOCALAPPDATA)\VisualGDB\RemoteSourceCache\192.168.56.101\0000\include"
+				ForcedIncludes="$(ProjectDir)\gcc_Release.h;$(VISUALGDB_DIR)\gcc_compat.h"
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source files"
+			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			>
+			<File
+				RelativePath=".\epoll.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\error.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\unixdgcli01.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\unixdomains.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\wrapsock.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\wrapstdio.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\wrapunix.cpp"
+				>
+			</File>
+			<Filter
+				Name="Resource files"
+				Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
+				>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Header files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			>
+			<File
+				RelativePath=".\unp.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Make files"
+			Filter="*.mak"
+			>
+			<File
+				RelativePath=".\debug.mak"
+				>
+			</File>
+			<File
+				RelativePath=".\release.mak"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\Makefile"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
