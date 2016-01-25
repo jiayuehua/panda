@@ -40,14 +40,9 @@ dg_client(int sfd, const SA* pSA, socklen_t len)
 
   /* Buffer where events are returned */
   events = (epoll_event *)calloc(MAXEVENTS, sizeof event);
-  /* The event loop */
-  /* The event loop */
-  /* The event loop */
-  /* The event loop */
-  int i = 0;
 
-  for (;; ++i) {
-    int n, i;
+  for (;;) {
+    int n, j;
     n = epoll_wait(efd, events, MAXEVENTS, 0);
     int done = 0;
     char buf[512];
@@ -56,34 +51,23 @@ dg_client(int sfd, const SA* pSA, socklen_t len)
       ssize_t count = sendto(sfd, buf, strlen (buf), 0, pSA, len );
 
       if (count == -1) {
-        /* If errno == EAGAIN, that means we have read all
-        data. So go back to the main loop. */
         if (errno != EAGAIN) {
           perror("sendto");
         }
-
-        continue;;
       } else if (count == 0) {
-        /* End of file. The remote has closed the
-        connection. */
-        continue;;
-      }
-
-      if (s == -1) {
-        perror("sendto");
       }
     }
 
-    for (i = 0; i < n; i++) {
-      if ((events[i].events & EPOLLERR) ||
-          (events[i].events & EPOLLHUP)
+    for (j = 0; j < n; j++) {
+      if ((events[j].events & EPOLLERR) ||
+          (events[j].events & EPOLLHUP)
          ) {
         /* An error has occured on this fd, or the socket is not
         ready for reading (why were we notified then?) */
 //        close(events[i].data.fd);
         continue;
-      } else if (sfd == events[i].data.fd) {
-        if (events[i].events & EPOLLIN) {
+      } else if (sfd == events[j].data.fd) {
+        if (events[j].events & EPOLLIN) {
           /* We have data on the fd waiting to be read. Read and
           display it. We must read whatever data is available
           completely, as we are running in edge-triggered mode
@@ -94,7 +78,7 @@ dg_client(int sfd, const SA* pSA, socklen_t len)
           while (1) {
             ssize_t count;
             char buf[512];
-            count = recvfrom(events[i].data.fd, buf, sizeof buf, 0 ,0 , 0);
+            count = recvfrom(events[j].data.fd, buf, sizeof buf, 0 ,0 , 0);
 
             if (count == -1) {
               /* If errno == EAGAIN, that means we have read all
