@@ -23,7 +23,7 @@ error:
 	$(error Invalid configuration, please check your inputs)
 endif
 
-SOURCEFILES := epoll.cpp error.cpp unixdgcli01.cpp unixdomains.cpp wrapsock.cpp wrapstdio.cpp wrapunix.cpp
+SOURCEFILES := epoll.cpp error.cpp unixdgcli01.cpp  wrapsock.cpp wrapstdio.cpp wrapunix.cpp
 EXTERNAL_LIBS := 
 EXTERNAL_LIBS_COPIED := $(foreach lib, $(EXTERNAL_LIBS),$(BINARYDIR)/$(notdir $(lib)))
 
